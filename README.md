@@ -1,22 +1,77 @@
-# Twitter Sentiment Analysis using RoBERTa and NLTK
+# 🐦 Twitter Sentiment Analysis
 
-This repository contains a state-of-the-art Sentiment Analysis tool developed as part of my Machine Learning Internship at Codec Technologies. The project classifies Twitter data (tweets) into three distinct categories: **Positive**, **Negative**, or **Neutral**.
+This project performs sentiment analysis on tweets and classifies them as **Positive**, **Negative**, or **Neutral** using a pre-trained RoBERTa model from Hugging Face.
 
 ## 🚀 Overview
-Instead of relying solely on traditional lexicon-based methods, this project utilizes a hybrid approach:
-1. **NLTK (Natural Language Toolkit):** Used for robust social-media tokenization via `TweetTokenizer` to cleanly handle handles, URLs, and punctuation.
-2. **Hugging Face Transformers (RoBERTa):** Utilizes the deep-learning model `cardiffnlp/twitter-roberta-base-sentiment`, which is specifically pre-trained on millions of tweets for highly accurate contextual understanding.
 
-## 🛠️ Features
-- **Advanced Preprocessing:** Automatically sanitizes and normalizes user mentions (`@user`) and links (`http`).
-- **Emoji-Aware Tokenization:** Retains emotional markers like emojis intact during splitting.
-- **Deep Learning Inference:** Outputs probability distributions across negative, neutral, and positive labels using Softmax activation.
+Social media platforms contain a large amount of user opinions and feedback. This project analyzes the sentiment of tweets by combining text preprocessing with a powerful transformer-based language model.
 
-## 📦 Installation & Setup
+The model processes a tweet and predicts the probability of each sentiment category.
 
-To run this project locally, clone the repository and install the required dependencies:
+## 🛠️ Technologies Used
+
+* Python
+* Transformers (Hugging Face)
+* RoBERTa
+* SciPy
+* PyTorch
+
+## ✨ Features
+
+* Classifies tweets as Positive, Negative, or Neutral
+* Handles user mentions and URLs during preprocessing
+* Uses a pre-trained RoBERTa model trained on Twitter data
+* Provides confidence scores for each sentiment class
+
+## ⚙️ How It Works
+
+1. Preprocess the tweet text
+2. Replace usernames and links with standard tokens
+3. Tokenize the text using the RoBERTa tokenizer
+4. Generate sentiment predictions using the model
+5. Apply Softmax to obtain sentiment probabilities
+
+## ▶️ Installation
 
 ```bash
-git clone [https://github.com/krishnagll/Twitter-Sentiment-Analysis.git](https://github.com/krishnagll/Twitter-Sentiment-Analysis.git)
+git clone https://github.com/krishnagll/Twitter-Sentiment-Analysis.git
 cd Twitter-Sentiment-Analysis
-pip install transformers torch scipy nltk
+pip install transformers torch scipy
+```
+
+Run the project:
+
+```bash
+python tw-sentiment.py
+```
+
+## 🧪 Example
+
+**Input Tweet**
+
+```text
+This movie was amazing! I loved every moment of it.
+```
+
+**Output**
+
+```text
+Positive : 0.95
+Neutral  : 0.04
+Negative : 0.01
+```
+
+## 📚 Learning Outcomes
+
+* Natural Language Processing (NLP)
+* Transformer Models
+* Sentiment Analysis
+* Text Preprocessing
+* Hugging Face Transformers
+
+## 👨‍💻 Author
+
+**Krishna Goyal**
+Machine Learning Intern – Codec Technologies
+
+GitHub: https://github.com/krishnagll
